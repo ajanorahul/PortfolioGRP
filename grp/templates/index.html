@@ -1,0 +1,505 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/urstyle.css' %}">
+
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>GRP Portfolio</title>
+</head>
+<body>
+  <!-- Scrool top -->
+  <!-- <a href="#" class="scrolltop" id="scroll-top">
+    <i class='bx bx-chevron-up scrolltop__icon'></i>
+  </a> -->
+
+
+  <div class="scrolltop">
+    <i class="bx bx-chevron-up scrolltop__icon" onclick="topfunction()" id="myBtn"></i>
+
+  </div>
+
+    <!-- Header -->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="" class="nav__logo">GRP</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, My Name is</span>
+                    <h1 class="home__name">GR Pokhrel</h1>
+                    <span class="home__profession">Web Developer | Graphic Designer</span>
+                    <a download="" href="" class="button button-light home__button">Download Cv</a>
+
+                </div>
+                <div class="home__social">
+                    <a href="#" class="home__social-icon"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="#" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="home__social-icon"><i class='bx bxl-twitter'></i></a>
+                </div>
+
+                <div class="home__img">
+                    <img src="{% static 'img/GRRP.jpg' %}" alt="">
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+ <section class="about section bd-container" id="about">
+     <span class="section-subtitle">My History</span>
+     <h2 class="section-title">About Me</h2>
+     <div class="about__container bd-grid">
+         <!-- {% for set in aboutset %} -->
+         <div class="about__data bd-grid">
+             <p class="about__description"><span>Hello, I am <br></span>
+                G Rahul Pokhrel, I have been working in web Development for past couple of years</p>
+                {% for a in aboutset %}
+                <div>
+                    <span class="about__number">0{{a.experience}}</span>
+                    <span class="about__achievement">Years of Experience</span>
+                </div>
+
+                <div>
+                    <span class="about__number">{{a.project}}+</span>
+                    <span class="about__achievement">Project Completed</span>
+                </div>
+
+                <div>
+                    <span class="about__number">{{a.design}}+</span>
+                    <span class="about__achievement">Graphic Design</span>
+                </div>
+                {% endfor %}
+            </div>
+        <!-- {% endfor %} -->
+      
+
+            <img src="{% static 'img/GRP1.jpg'%}" alt="" class="about__img">
+
+         
+     </div>
+ </section>
+
+ <section class="qualification section bd-container">
+    <span class="section-subtitle">Experience</span>
+    <h2 class="section-title">Qualification</h2>
+
+    <div class="qualification__container bd-grid">
+        <div class="qualification__content">
+            <h2 class="qualification__title">
+                <i class='bx bx-briefcase-alt qualification__title-icon'></i>
+                Work Experience
+            </h2>
+            <div class="bd-grid">
+                <div class="qualification__data">
+                    <h3 class="qualification__area">Full stack developer</h3>
+
+                    <div class="qualification__box">
+                         <span class="qualification__work">
+                           <i class='bx bx-briefcase-alt qualification__icon'></i>
+                         Freelancer - Kathmandu , Nepal
+
+                        </span>
+
+                        <span class="qualification__work">
+                            <i class='bx bx-calendar-alt qualification__icon'></i>
+                            Jan 2019 - current
+ 
+                         </span>
+
+                    </div>
+                </div>
+
+                <div class="qualification__data">
+                    <h3 class="qualification__area">Python - Django</h3>
+
+                    <div class="qualification__box">
+                        <span class="qualification__work">
+                           <i class='bx bx-briefcase-alt qualification__icon'></i>
+                         Kathmandu - Nepal
+
+                        </span>
+
+                        <span class="qualification__work">
+                            <i class='bx bx-calendar-alt qualification__icon'></i>
+                            Mar 2019 - Dec 2019
+ 
+                         </span>
+
+                    </div>
+                </div>
+
+                <div class="qualification__data">
+                    <h3 class="qualification__area">Intrnship</h3>
+
+                    <div class="qualification__box">
+                        <span class="qualification__work">
+                           <i class='bx bx-briefcase-alt qualification__icon'></i>
+                         Grafias - Kathmandu
+
+                        </span>
+
+                        <span class="qualification__work">
+                            <i class='bx bx-calendar-alt qualification__icon'></i>
+                            Jan 2018 - Dec 2018
+ 
+                         </span>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    
+   
+    <div class="qualification__content">
+        <h2 class="qualification__title">
+            <i class='bx bx-bookmark-alt qualification__title-icon'></i>
+            Education
+        </h2>
+        <div class="bd-grid">
+            <div class="qualification__data">
+                <h3 class="qualification__area">Computer Engineer</h3>
+
+                <div class="qualification__box">
+                    <span class="qualification__work">
+                       <i class='bx bx-book-alt qualification__icon'></i>
+                     Advanced College of Engineering and Management
+
+                    </span>
+
+                    <span class="qualification__work">
+                        <i class='bx bx-book-alt qualification__icon'></i>
+                        oct 2013 - Aug 2017
+
+                     </span>
+
+                </div>
+            </div>
+
+            <div class="qualification__data">
+                <h3 class="qualification__area">Higher Secondary</h3>
+
+                <div class="qualification__box">
+                    <span class="qualification__work">
+                       <i class='bx bx-briefcase-alt qualification__icon'></i>
+                     People's College, Kathmandu
+
+                    </span>
+
+                    <span class="qualification__work">
+                        <i class='bx bx-calendar-alt qualification__icon'></i>
+                        Oct 2010 - Aug 2012
+
+                     </span>
+
+                </div>
+            </div>
+
+            <div class="qualification__data">
+                <h3 class="qualification__area">SLC</h3>
+
+                <div class="qualification__box">
+                    <span class="qualification__work">
+                       <i class='bx bx-briefcase-alt qualification__icon'></i>
+                       Azedon High School , India
+
+                    </span>
+
+                    <span class="qualification__work">
+                        <i class='bx bx-calendar-alt qualification__icon'></i>
+                        2009
+
+                     </span>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+<section class="services section bd-container" id="services">
+    <span class="section-subtitle">what i offer</span>
+    <h2 class="section-title">Services</h2>
+
+    <div class="services__container bd-grid">
+        <div class="services__data">
+            <i class="bx bx-palette services__icon"></i>
+            <h3 class="services__title">UI/UX Design</h3>
+            <p class="services__description">I have work on number of project as an Front End Developer</p>
+            <a href="#" class="button">Know More</a> 
+        </div>
+
+        <div class="services__data">
+            <i class="bx bx-laptop services__icon"></i>
+            <h3 class="services__title">Wed Development</h3>
+            <p class="services__description">Service that i offer and work</p>
+            <a href="#" class="button">Know More</a>
+        </div>
+
+        <div class="services__data">
+            <i class="bx bx-pen services__icon"></i>
+            <h3 class="services__title">Graphic Design</h3>
+            <p class="services__description">Service that i offer and work in</p>
+            <a href="#" class="button">Know More</a>
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- 
+Project's -->
+
+<section class="project section bd-container">
+    <div class="project__container bd-grid">
+        <div class="project__data">
+            <i class='bx bx-chat project__icon'></i>
+            <div>
+                <h2 class="project__title">Project in mind</h2>
+                <p class="project__description">Hire me to carry out the Projects.</p>
+            </div>
+
+            <div>
+                <a href="#contact" class="button button-white">Hire me</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="portfolio section bd-container" id="portfolio">
+    <span class="section-subtitle">My Project</span>
+    <h2 class="section-title">Portfolio</h2>
+   
+    
+    <div class="portfolio__nav">
+
+
+        <a href=""><span class="portfolio__item active-portfolio">All</span></a>
+        
+        {% for c in categories %}
+
+        <a href="/?category={{c.id}}"><span class="portfolio__item active-portfolio" data-filter= ".all">{{c.name}}</span></a>
+
+        {% endfor %}
+        
+        <!-- <span class="portfolio__item" data-filter= ".web">Web</span>
+        <span class="portfolio__item" data-filter= ".ux">UI/UX</span>
+        <span class="portfolio__item" data-filter= ".app">App</span> -->
+    </div>
+   
+
+    <div class="portfolio__container bd-grid">
+
+        {% for p in portfolio %}
+        <div class="portfolio__content mix web">
+            <a href="#"><img src="{% static 'img/work1.jpg' %}" alt="" class="portfolio__img"></a>
+           
+            <div class="portfolio__data">
+                <span class="portfolio__subtitle">{{p.portfolio_subtitle}}</span>
+                <a href="#"><h2 class="portfolio__title">{{p.portfolio_title}}</h2></a>
+
+                <!-- <a href="#" class="button button-link">View Detail</a> -->
+            </div>
+        
+        </div>
+        {% endfor %}
+
+        <!-- <div class="portfolio__content mix web">
+            <a href="#"><img src="img/work2.jpg" alt="" class="portfolio__img"></a>
+           
+            <div class="portfolio__data">
+                <span class="portfolio__subtitle">Web Development</span>
+                <a href="#"><h2 class="portfolio__title">New Portfolio of my work</h2></a>
+
+                <a href="#" class="button button-link">View Detail</a>
+            </div>
+        
+        </div>
+
+        <div class="portfolio__content mix app">
+            <a href="#"><img src="img/work3.jpg" alt="" class="portfolio__img"></a>
+           
+            <div class="portfolio__data">
+                <span class="portfolio__subtitle">UX Design</span>
+                <a href="#"><h2 class="portfolio__title">New Portfolio of my work</h2></a>
+
+                <a href="#" class="button button-link">View Detail</a>
+            </div>
+        
+        </div>
+
+        <div class="portfolio__content mix app">
+            <a href="#"><img src="img/work4.jpg" alt="" class="portfolio__img"></a>
+           
+            <div class="portfolio__data">
+                <span class="portfolio__subtitle">Web Development</span>
+                <a href="#"><h2 class="portfolio__title">New Portfolio of my work</h2></a>
+
+                <a href="#" class="button button-link">View Detail</a>
+            </div>
+        
+        </div> -->
+
+
+    </div>
+
+
+</section>
+<!-- 
+<section class="testimonial section bd-container" >
+    <span class="section-subtitle">What my client say</span>
+    <h2 class="section-title">Testimonial</h2>
+
+    <div class=" testimonial_container swiper-container">
+        <div class="swiper-wrapper">
+            <div class="testimonial__content swiper-slide">
+                <img src="img/testimonial1.jpg" alt="" class="testimonial__img">
+                <h3 class="testimonial__title">Nik Holly</h3>
+                <span class="testimonial__client">Client</span>
+                <p class="testimonial__description"> This Company does a very great job in web Development</p>
+            </div>
+
+            <div class="testimonial__content swiper-slide">
+                <img src="img/testimonial2.jpg" alt="" class="testimonial__img">
+                <h3 class="testimonial__title">Nik Holly</h3>
+                <span class="testimonial__client">Client</span>
+                <p class="testimonial__description"> This Company does a very great job in web Development</p>
+            </div>
+
+
+            <div class="testimonial__content swiper-slide">
+                <img src="img/testimonial3.jpg" alt="" class="testimonial__img">
+                <h3 class="testimonial__title">Nik Holly</h3>
+                <span class="testimonial__client">Client</span>
+                <p class="testimonial__description"> This Company does a very great job in web Development</p>
+            </div>
+
+        </div>
+    </div>
+
+</section> -->
+
+
+<section class="contact section bd-container" id="contact">
+    <span class="section-subtitle">For Project</span>
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact__container bd-grid">
+        <div class="contact__content bd-grid">
+            <div class="contact__box">
+                <i class='bx bx-home contact__icon'></i>
+                <h3 class="contact__title">location</h3>
+                <span class="contact_description">Thashikhel - Lalitpur</span>
+            </div>
+
+            <div class="contact__box">
+                <i class='bx bx-phone contact__icon'></i>
+                <h3 class="contact__title">Phone</h3>
+                <span class="contact_description">977-9841023323 </span>
+            </div>
+
+            <div class="contact__box">
+                <i class='bx bx-envelope contact__icon'></i>
+                <h3 class="contact__title">Email</h3>
+                <span class="contact_description">rahul.ajano@yahoo.com</span>
+            </div>
+
+            <div class="contact__box">
+                <i class='bx bx-chat contact__icon'></i>
+                <h3 class="contact__title">Chat</h3>
+                <div>
+                    <a href="#" class="contact__social"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="#" class="contact__social"><i class='bx bxl-whatsapp-square'></i></a>
+                    <a href="#" class="contact__social"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <form action="" class="contact__form">
+            <div class="contact__inputs">
+                <input type="text" placeholder="Name" class="contact__input">
+                <input type="email" placeholder="Email" class="contact__input">
+            </div>
+
+            <!-- <div class="contact__inputs">
+                <input type="text" placeholder="Project" class="contact__input">
+                <input type="number" placeholder="Number" class="contact__input">
+            </div> -->
+
+            <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
+            <input type="submit" value="Send Message" class="button contact__button">
+
+
+        </form>
+
+    </div>
+
+
+</section>
+
+
+<footer class="footer">
+    <div class="footer__container bd-container">
+        <h1 class="footer__title">GRP</h1>
+        <p class="footer__description">This site is personal</p>
+
+        <div class="footer__social">
+            <a href="#" class="footer__link"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#" class="footer__link"><i class='bx bxl-github' ></i></a>
+            <a href="#" class="footer__link"><i class='bx bxl-facebook' ></i></a>
+        </div>
+
+        <p class="footer__copy">@copyright GRP All Right Reserved</p>
+    </div>
+
+</footer>
+
+
+
+
+
+
+<script src="{% static 'js/mixitup.min.js'%}"></script>
+
+<script src="{% static 'js/gsap.min.js'%}"></script>
+
+<script src="{% static 'js/swiper-bundle.min.js'%}"></script>
+
+
+<script src="{%static 'js/main.js'%}"></script>
+</body>
+</html>
