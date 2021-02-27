@@ -17,7 +17,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-    
+
 
 class Portfolio(models.Model):
     portfolio_name = models.ForeignKey(Category, on_delete=models.CASCADE)

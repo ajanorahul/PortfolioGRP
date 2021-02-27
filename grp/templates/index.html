@@ -297,7 +297,7 @@ Project's -->
 </section>
 
 
-
+<!-- portfolio section start -->
 <section class="portfolio section bd-container" id="portfolio">
     <span class="section-subtitle">My Project</span>
     <h2 class="section-title">Portfolio</h2>
@@ -306,77 +306,39 @@ Project's -->
     <div class="portfolio__nav">
 
 
-        <a href=""><span class="portfolio__item active-portfolio">All</span></a>
+        <span class="portfolio__item active-portfolio" data-filter= ".all">All</span>
         
         {% for c in categories %}
 
-        <a href="/?category={{c.id}}"><span class="portfolio__item active-portfolio" data-filter= ".all">{{c.name}}</span></a>
+        <span class="portfolio__item" data-filter= ".{{c.name}}">{{c.name}}</span>
 
         {% endfor %}
-        
-        <!-- <span class="portfolio__item" data-filter= ".web">Web</span>
-        <span class="portfolio__item" data-filter= ".ux">UI/UX</span>
-        <span class="portfolio__item" data-filter= ".app">App</span> -->
     </div>
    
 
     <div class="portfolio__container bd-grid">
 
         {% for p in portfolio %}
-        <div class="portfolio__content mix web">
+        <div class="portfolio__content mix {{p.portfolio_name.name}} all">
             <a href="#"><img src="{% static 'img/work1.jpg' %}" alt="" class="portfolio__img"></a>
            
             <div class="portfolio__data">
-                <span class="portfolio__subtitle">{{p.portfolio_subtitle}}</span>
-                <a href="#"><h2 class="portfolio__title">{{p.portfolio_title}}</h2></a>
+                <span class="portfolio__subtitle">{{p.portfolio_title}}</span>
+                <a href="#"><h2 class="portfolio__title">{{p.portfolio_subtitle}}</h2></a>
 
-                <!-- <a href="#" class="button button-link">View Detail</a> -->
+               
             </div>
         
         </div>
         {% endfor %}
 
-        <!-- <div class="portfolio__content mix web">
-            <a href="#"><img src="img/work2.jpg" alt="" class="portfolio__img"></a>
-           
-            <div class="portfolio__data">
-                <span class="portfolio__subtitle">Web Development</span>
-                <a href="#"><h2 class="portfolio__title">New Portfolio of my work</h2></a>
-
-                <a href="#" class="button button-link">View Detail</a>
-            </div>
-        
-        </div>
-
-        <div class="portfolio__content mix app">
-            <a href="#"><img src="img/work3.jpg" alt="" class="portfolio__img"></a>
-           
-            <div class="portfolio__data">
-                <span class="portfolio__subtitle">UX Design</span>
-                <a href="#"><h2 class="portfolio__title">New Portfolio of my work</h2></a>
-
-                <a href="#" class="button button-link">View Detail</a>
-            </div>
-        
-        </div>
-
-        <div class="portfolio__content mix app">
-            <a href="#"><img src="img/work4.jpg" alt="" class="portfolio__img"></a>
-           
-            <div class="portfolio__data">
-                <span class="portfolio__subtitle">Web Development</span>
-                <a href="#"><h2 class="portfolio__title">New Portfolio of my work</h2></a>
-
-                <a href="#" class="button button-link">View Detail</a>
-            </div>
-        
-        </div> -->
-
-
     </div>
-
-
 </section>
+<!-- portfolio section end -->
+
+
+
+
 <!-- 
 <section class="testimonial section bd-container" >
     <span class="section-subtitle">What my client say</span>
